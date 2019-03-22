@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!-- 自动扫描-->
+    <context:component-scan base-package="van.controller"/>
+
+    <!--映射器与适配器，去掉@ResponseBody就会出问题-->
+    <!--<mvc:annotation-driven /> 会自动注册DefaultAnnotationHandlerMapping与-->
+    <!--AnnotationMethodHandlerAdapter两个bean,用以支持@Controllers分发请求。-->
+    <mvc:annotation-driven/>
+
+    <!--&lt;!&ndash; 避免IE执行AJAX时,返回JSON出现下载文件,使用时去掉注释 &ndash;&gt;-->
+    <!--<bean id="mappingJacksonHttpMessageConverter"-->
+          <!--class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+        <!--<property name="supportedMediaTypes">-->
+            <!--<list>-->
+                <!--<value>text/html;charset=UTF-8</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;文件上传配置,使用时去掉注释&ndash;&gt;-->
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+    <!--&lt;!&ndash;默认编码&ndash;&gt;-->
+    <!--<property name="defaultEncoding" value="UTF-8"/>-->
+    <!--&lt;!&ndash;上传文件最大限制，40M&ndash;&gt;-->
+    <!--<property name="maxUploadSize" value="41943040"/>-->
+    <!--</bean>-->
+
+    <!--定义跳转文件的前缀、后缀，视图模式配置-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/"
+          p:suffix=".html"/>
+</beans>
