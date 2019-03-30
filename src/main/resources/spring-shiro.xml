@@ -3,5 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--define the realm -->
+    <bean id="myRealm" class="van.service.impl.MyRealm"></bean>
+
+    <!--配置 Shiro 的SecurityManager Bean-->
+    <bean id="securityManager" class="org.apache.shiro.mgt.DefaultSecurityManager">
+        <property name="realm" ref="myRealm"/>
+    </bean>
+
+
 
 </beans>
