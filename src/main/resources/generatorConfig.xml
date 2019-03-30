@@ -61,10 +61,6 @@
                enableSelectByExample="false" enableUpdateByExample="false"/>
         <table schema="yuling" tableName="materiel_stock" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table schema="yuling" tableName="module" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table schema="yuling" tableName="module_auth" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
         <table schema="yuling" tableName="out_in_warehousing" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
         <table schema="yuling" tableName="post" enableCountByExample="false" enableDeleteByExample="false"
