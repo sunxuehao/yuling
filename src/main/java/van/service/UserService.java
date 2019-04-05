@@ -15,4 +15,6 @@ public interface UserService {
     String encryptUserPassword(String password);
 
     Boolean loginout();
+
+
 }

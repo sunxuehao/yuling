@@ -18,4 +18,5 @@ public class UserController {
     public ResultBean<User> login(@RequestBody User user) {
         return new ResultBean<>(userService.login(user));
     }
+
 }
