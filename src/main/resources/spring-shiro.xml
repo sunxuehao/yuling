@@ -12,29 +12,29 @@
     </bean>
 
     <!--详见 http://shiro.apache.org/spring.html -->
-    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
-        <property name="securityManager" ref="securityManager"/>
-        <!-- override these for application-specific URLs if you like:
-        <property name="loginUrl" value="/login.jsp"/>
-        <property name="successUrl" value="/home.jsp"/>
-        <property name="unauthorizedUrl" value="/unauthorized.jsp"/> -->
-        <!-- The 'filters' property is not necessary since any declared javax.servlet.Filter bean  -->
-        <!-- defined will be automatically acquired and available via its beanName in chain        -->
-        <!-- definitions, but you can perform instance overrides or name aliases here if you like: -->
-        <!-- <property name="filters">
-            <util:map>
-                <entry key="anAlias" value-ref="someFilter"/>
-            </util:map>
-        </property> -->
-        <property name="filterChainDefinitions">
-            <value>
-                # some example chain definitions:
-                /admin/** = authc, roles[admin]
-                /docs/** = authc, perms[document:read]
-                /** = authc
-                # more URL-to-FilterChain definitions here
-            </value>
-        </property>
-    </bean>
+    <!--<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">-->
+        <!--<property name="securityManager" ref="securityManager"/>-->
+        <!--&lt;!&ndash; override these for application-specific URLs if you like:-->
+        <!--<property name="loginUrl" value="/login.jsp"/>-->
+        <!--<property name="successUrl" value="/home.jsp"/>-->
+        <!--<property name="unauthorizedUrl" value="/unauthorized.jsp"/> &ndash;&gt;-->
+        <!--&lt;!&ndash; The 'filters' property is not necessary since any declared javax.servlet.Filter bean  &ndash;&gt;-->
+        <!--&lt;!&ndash; defined will be automatically acquired and available via its beanName in chain        &ndash;&gt;-->
+        <!--&lt;!&ndash; definitions, but you can perform instance overrides or name aliases here if you like: &ndash;&gt;-->
+        <!--&lt;!&ndash; <property name="filters">-->
+            <!--<util:map>-->
+                <!--<entry key="anAlias" value-ref="someFilter"/>-->
+            <!--</util:map>-->
+        <!--</property> &ndash;&gt;-->
+        <!--<property name="filterChainDefinitions">-->
+            <!--<value>-->
+                <!--# some example chain definitions:-->
+                <!--/admin/** = authc, roles[admin]-->
+                <!--/docs/** = authc, perms[document:read]-->
+                <!--/** = authc-->
+                <!--# more URL-to-FilterChain definitions here-->
+            <!--</value>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 </beans>

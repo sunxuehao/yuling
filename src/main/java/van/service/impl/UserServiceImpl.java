@@ -1,5 +1,6 @@
 package van.service.impl;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 import van.pojo.User;
 import van.service.UserService;
@@ -18,6 +19,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User register(User user) {
+
         return null;
     }
 
@@ -32,7 +34,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean loginout() {
+    public Boolean                                       loginout() {
         return null;
     }
 }
